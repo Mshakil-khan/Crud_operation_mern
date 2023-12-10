@@ -1,0 +1,43 @@
+/* Styles for custom scrollbar */
+.table-responsive {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    max-width: 100%; /* Set maximum width to ensure responsiveness */
+  }
+  
+  /* Define scrollbar styles */
+  .table-responsive::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  /* Handle on hover */
+  .table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #3498db; /* Change background color on hover */
+  }
+  
+  /* Handle */
+  .table-responsive::-webkit-scrollbar-thumb {
+    background: #95a5a6; /* Background color of the scrollbar */
+    border-radius: 5px; /* Rounded corners for the scrollbar handle */
+  }
+  
+  /* Track */
+  .table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
+  }
+
+  .button_edit{
+    color: #008000;
+  }
+
+  .button_delete{
+    color: #ff0000;
+  }
+
+  .button_view{
+    color: #0000ff;
+  }
+
+  .action_icon{
+    display: flex;
+  }
+  

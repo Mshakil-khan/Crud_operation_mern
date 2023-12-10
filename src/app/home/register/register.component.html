@@ -1,0 +1,72 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="m-4">
+    <!-- <div class="mb-3">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" class="form-control" id="name" formControlName="name">
+      <div *ngIf="userForm.get('name').invalid && userForm.get('name').touched">
+        <small *ngIf="userForm.get('name').errors?.required" class="text-danger">Name is required</small>
+      </div>
+    </div> -->
+  
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="m-4">
+    <div class="row">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+                </div>
+                <div *ngIf="userForm.get('name').invalid && userForm.get('name').touched">
+                    <small *ngIf="userForm.get('name').errors['required']" class="text-danger">Name is required</small>
+                </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="mb-3">
+                <label for="email" class="form-label">email:</label>
+                <input type="text" class="form-control" id="email" formControlName="email">
+                </div>
+                <div *ngIf="userForm.get('email').invalid && userForm.get('email').touched">
+                    <small *ngIf="userForm.get('email').errors['required']" class="text-danger">email is required</small>
+                </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="mb-3">
+                <label for="mobile" class="form-label">Mobile:</label>
+                <input type="text" class="form-control" id="mobile" formControlName="mobile">
+                </div>
+                <div *ngIf="userForm.get('mobile').invalid && userForm.get('mobile').touched">
+                    <small *ngIf="userForm.get('mobile').errors['required']" class="text-danger">Mobile is required</small>
+                </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="mb-3">
+                <label for="work" class="form-label">Work:</label>
+                <input type="text" class="form-control" id="work" formControlName="work">
+                </div>
+                <div *ngIf="userForm.get('work').invalid && userForm.get('work').touched">
+                    <small *ngIf="userForm.get('work').errors['required']" class="text-danger">Work is required</small>
+                </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="mb-3">
+                <label for="location" class="form-label">Location:</label>
+                <input type="text" class="form-control" id="location" formControlName="location">
+                </div>
+                <div *ngIf="userForm.get('location').invalid && userForm.get('location').touched">
+                    <small *ngIf="userForm.get('location').errors['required']" class="text-danger">Location is required</small>
+                </div>
+        </div>
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="mb-3">
+                <label for="age" class="form-label">Age:</label>
+                <input type="text" class="form-control" id="age" formControlName="age">
+                </div>
+                <div *ngIf="userForm.get('age').invalid && userForm.get('age').touched">
+                    <small *ngIf="userForm.get('age').errors['required']" class="text-danger">Age is required</small>
+                </div>
+        </div>
+    </div>
+
+  </form>  
+    <!-- <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Submit</button> -->
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  
